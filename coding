@@ -1,0 +1,187 @@
+package Topic_University;
+
+import java.util.Scanner;
+
+public class Student {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc = new Scanner (System.in);
+		
+		String name;
+		String countryName = "Malaysia";
+		char choice3 = 'A';
+		char choice4 = 'B';
+	    int sem;
+	    int totalCocuMark;
+	    double balanceFee;
+	    double collegeFee = 160.99;
+	    
+	    
+	    
+	    System.out.println("Please key in your name:");
+	    name = sc.nextLine();
+	    System.out.println("Please key in what semester are you now:");
+	    sem = sc.nextInt();
+	    
+	    System.out.println("Please key in your country name:");
+	    String str1 = sc.nextLine();
+	    if (countryName == "Malaysia")
+	    while (countryName == "Malaysia")
+	    countryName = sc.nextLine();
+	    {
+	    System.out.println("**************************************************************************************************************");
+	    System.out.println();
+	    System.out.println(" For Malaysian students you may choose between two type of residential college.");
+	    System.out.println(" A. Syed Residential College");
+	    System.out.println(" B. Zain Residential College");
+	    System.out.println();
+	    System.out.println("Please key in your choice by stating 'A' or 'B' based on the residential college in the next question");
+	    System.out.println();
+	    System.out.println("*************************************************************************************************************");
+	    }
+	    
+        System.out.println("Please key in your choice:");
+        choice3 = sc.next().charAt(0);
+	    
+	    if(choice3 == 'A')
+	    {   
+	    balanceFee = (collegeFee*3);
+	    System.out.println("Your current balance fee is: " +balanceFee);
+	    
+	    System.out.println("***************************************************************************************************");
+	    System.out.println();
+	    System.out.println("Discount 80% will be given for student who are active in co-curriculum");
+	    System.out.println("Students who have successfully achieve 70 mark and above in their co-curriculum will get the discount");
+	    System.out.println();
+	    System.out.println("***************************************************************************************************");
+	    }
+	    
+	    else if(choice3 != 'A')
+	    {
+	    balanceFee = collegeFee;
+	    System.out.println("Your current balance fee is: " +balanceFee);
+
+	    System.out.println("***************************************************************************************************");
+	    System.out.println();
+	    System.out.println("Discount 80% will be given for student who are active in co-curriculum");
+	    System.out.println("Students who have successfully achieve 70 mark and above in their co-curriculum will get the discount");
+	    System.out.println();
+	    System.out.println("***************************************************************************************************");
+	    }
+	
+	    
+	    System.out.println("Please key in your country name:");
+	    String str2 = sc.nextLine();
+	    if (countryName != "Malaysia")
+	    while (countryName != "Malaysia")
+	    countryName = sc.nextLine();
+	    
+	    {
+	    System.out.println("**************************************************************************************************************");
+	    System.out.println();
+	    System.out.println("For students who are not Malaysian/International Students you only given one choices of your college which is Syed Residential College");
+	    System.out.println();
+	    System.out.println("**************************************************************************************************************");
+	    System.out.println();
+	    System.out.println(" Your choice data has been recorded.");
+	    balanceFee = (collegeFee*3);
+	    System.out.println("Your current balance fee is: " +balanceFee);
+	    
+	    System.out.println("***************************************************************************************************");
+	    System.out.println();
+	    System.out.println("Discount 80% will be given for student who are active in co-curriculum");
+	    System.out.println("Students who have successfully achieve 70 mark and above in their co-curriculum will get the discount");
+	    System.out.println();
+	    System.out.println("***************************************************************************************************");
+	    }
+	    
+	    System.out.println("Please key in your total co-curriculum mark : ");
+	    totalCocuMark = sc.nextInt();
+	
+	    if(choice3 =='A' && totalCocuMark > 70)
+	    {
+	    	balanceFee = (collegeFee*3);
+		    balanceFee = (balanceFee*0.2);
+		    System.out.println("Please key in your total co-curriculum mark: " +totalCocuMark);
+		    System.out.printf("The balance fee that you need to pay is: %.2f\n" ,balanceFee); 
+		    
+		    System.out.println("--------------------------------------------------------------------");
+		    System.out.println();
+		    System.out.println("Student's Details");
+		    System.out.println("Name: \t \t \t \t \t" +name);
+		    System.out.println("Semester: \t \t \t \t" +sem);
+		    System.out.println("Country name: \t \t \t \t" +countryName);
+		    System.out.println("College Residential choice: \t \t" +choice3);
+		    System.out.println("Total Co-curriculum Mark: \t \t" +totalCocuMark);
+		    System.out.printf("Total Balance Fee: \t \t \t%.2f" ,balanceFee);
+		    System.out.println();
+		    System.out.println("---------------------------------------------------------------------");
+		    
+	}
+	    if(choice3 =='A' && totalCocuMark < 70)
+	    {
+	    	balanceFee = (collegeFee*3);
+	    	System.out.println("The balance fee that you need to pay is: " +balanceFee); 
+	    	
+	    	System.out.println("--------------------------------------------------------------------");
+		    System.out.println();
+		    System.out.println("Student's Details");
+		    System.out.println("Name: \t \t \t \t \t" +name);
+		    System.out.println("Semester: \t \t \t \t" +sem);
+		    System.out.println("Country name: \t \t \t \t" +countryName);
+		    System.out.println("College Residential choice: \t \t" +choice3);
+		    System.out.println("Total Co-curriculum Mark: \t \t" +totalCocuMark);
+		    System.out.println("Total Balance Fee: \t \t \t" +balanceFee);
+		    System.out.println();
+		    System.out.println("---------------------------------------------------------------------");
+		    
+	    }
+	    
+	    if (choice3 !='A' && totalCocuMark > 70)
+	    {
+	    	balanceFee = (collegeFee);
+	    	balanceFee = (collegeFee * 0.2);
+	    	System.out.printf("The balance fee that you need to pay is: %.2f\n" ,balanceFee); 
+	    	
+	    	System.out.println("--------------------------------------------------------------------");
+		    System.out.println();
+		    System.out.println("Student's Details");
+		    System.out.println("Name: \t \t \t \t \t" +name);
+		    System.out.println("Semester: \t \t \t \t" +sem);
+		    System.out.println("Country name: \t \t \t \t" +countryName);
+		    System.out.println("College Residential choice: \t \t" +choice4);
+		    System.out.println("Total Co-curriculum Mark: \t \t" +totalCocuMark);
+		    System.out.printf("Total Balance Fee: \t \t \t%.2f" ,balanceFee);
+		    System.out.println();
+		    System.out.println("---------------------------------------------------------------------");
+		    
+	    }
+	    
+	    else if(choice3 !='A' && totalCocuMark < 70)
+	    {
+	    	balanceFee = (collegeFee);
+	    	System.out.println("The balance fee that you need to pay is: " +balanceFee); 
+	    	
+	    	System.out.println("--------------------------------------------------------------------");
+		    System.out.println();
+		    System.out.println("Student's Details");
+		    System.out.println("Name: \t \t \t \t \t" +name);
+		    System.out.println("Semester: \t \t \t \t" +sem);
+		    System.out.println("Country name: \t \t \t \t" +countryName);
+		    System.out.println("College Residential choice: \t \t" +choice4);
+		    System.out.println("Total Co-curriculum Mark: \t \t" +totalCocuMark);
+		    System.out.println("Total Balance Fee: \t \t \t" +balanceFee);
+		    System.out.println();
+		    System.out.println("---------------------------------------------------------------------");
+		    
+	    }
+	    
+	    } 
+	    
+	}
+
+
+
+	
+
